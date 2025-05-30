@@ -31,11 +31,17 @@ They are downloaded together with WaveForms APP.
 so check **samples** folder first.
 
     #Load DWF library
+
     if sys.platform.startswith("win"):
+
         dwf = cdll.LoadLibrary("dwf.dll") 
+
     elif sys.platform.startswith("darwin"):
+
         dwf = cdll.LoadLibrary("/Library/Frameworks/dwf.framework/dwf")
+
     else:
+    
         dwf = cdll.LoadLibrary("libdwf.so")
 
 ## Specification
