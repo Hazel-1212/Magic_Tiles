@@ -7,3 +7,11 @@
 - Enable communication between the FPGA and Python through bidirectional UART serial ports. 
 - Allow the user to visualize the game using their own laptop. 
 BTW, the UART connection can come either from the built-in ports on the development board or from the AD2 (Analog Discovery 2) pins.
+## Materials and Environment
+- Nexys4 DDR
+- Analog Discovery 2
+- Speaker *2
+- Keypad *2
+- Pygame installed
+- WaveForms installed
+ (Make sure the folder is available **"C:\Program Files (x86)\Digilent\WaveFormsSDK\samples"**)

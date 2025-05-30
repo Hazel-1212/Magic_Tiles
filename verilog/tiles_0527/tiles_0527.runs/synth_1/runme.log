@@ -1,0 +1,517 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+ECHO 已關閉。
+ECHO 已關閉。
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {C:/03 Digital Lab/Final_Proj/0527_v/tiles_0527/tiles_0527.srcs/utils_1/imports/synth_1/top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/03 Digital Lab/Final_Proj/0527_v/tiles_0527/tiles_0527.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3920
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1338.441 ; gain = 440.910
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10929] literal value 'd50_000_000 truncated to fit in 25 bits [C:/03 Digital Lab/Final_Proj/0527_v/keypadspeaker.v:34]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/03 Digital Lab/Final_Proj/0527_v/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'music_dual_system' [C:/03 Digital Lab/Final_Proj/0527_v/keypadspeaker.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'music_dual_system' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/keypadspeaker.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_with_debouncer' [C:/03 Digital Lab/Final_Proj/0527_v/uart_with_debouncer.v:1]
+INFO: [Synth 8-226] default block is never used [C:/03 Digital Lab/Final_Proj/0527_v/uart_with_debouncer.v:77]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/03 Digital Lab/Final_Proj/0527_v/debouncer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/debouncer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'key_pulse_gen' [C:/03 Digital Lab/Final_Proj/0527_v/key_pulse_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key_pulse_gen' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/key_pulse_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UART_TX_CTRL' [C:/03 Digital Lab/Final_Proj/0527_v/UART_TX_CTRL.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'UART_TX_CTRL' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/UART_TX_CTRL.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UART_RX_CTRL' [C:/03 Digital Lab/Final_Proj/0527_v/UART_RX_CTRL.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'UART_RX_CTRL' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/UART_RX_CTRL.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'uart_with_debouncer' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/uart_with_debouncer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'score' [C:/03 Digital Lab/Final_Proj/0527_v/score_uart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'score' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/score_uart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'score_display' [C:/03 Digital Lab/Final_Proj/0527_v/display0522.v:1]
+INFO: [Synth 8-226] default block is never used [C:/03 Digital Lab/Final_Proj/0527_v/display0522.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'score_display' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/display0522.v:1]
+INFO: [Synth 8-6157] synthesizing module 'light_show' [C:/03 Digital Lab/Final_Proj/0527_v/light.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/03 Digital Lab/Final_Proj/0527_v/light.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'light_show' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/light.v:1]
+INFO: [Synth 8-6157] synthesizing module 'top_LFSR' [C:/03 Digital Lab/Final_Proj/0527_v/LFSR_CTRL.v:1]
+INFO: [Synth 8-6157] synthesizing module 'lfsr_3bit' [C:/03 Digital Lab/Final_Proj/0527_v/lfsr_3bit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr_3bit' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/lfsr_3bit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_LFSR' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/LFSR_CTRL.v:1]
+INFO: [Synth 8-6157] synthesizing module 'music_rom_left' [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:1]
+INFO: [Synth 8-6157] synthesizing module 'music_uart_left' [C:/03 Digital Lab/Final_Proj/0527_v/music_uart_left.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'music_uart_left' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/music_uart_left.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'music_rom_left' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:1]
+INFO: [Synth 8-6157] synthesizing module 'music_rom_right' [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:1]
+INFO: [Synth 8-6157] synthesizing module 'music_uart_right' [C:/03 Digital Lab/Final_Proj/0527_v/music_uart_right.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'music_uart_right' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/music_uart_right.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'music_rom_right' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:1]
+INFO: [Synth 8-6157] synthesizing module 'slow_counter_to_uart' [C:/03 Digital Lab/Final_Proj/0527_v/slow_counter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'slow_counter_uart' [C:/03 Digital Lab/Final_Proj/0527_v/slow_counter_uart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'slow_counter_uart' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/slow_counter_uart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'slow_counter_to_uart' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/slow_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/03 Digital Lab/Final_Proj/0527_v/top.v:1]
+WARNING: [Synth 8-6014] Unused sequential element valid_note1_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/keypadspeaker.v:94]
+WARNING: [Synth 8-6014] Unused sequential element prev_note1_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/keypadspeaker.v:128]
+WARNING: [Synth 8-6014] Unused sequential element valid_note2_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/keypadspeaker.v:138]
+WARNING: [Synth 8-6014] Unused sequential element prev_note2_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/keypadspeaker.v:170]
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/LFSR_CTRL.v:25]
+WARNING: [Synth 8-6014] Unused sequential element tick_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/LFSR_CTRL.v:26]
+WARNING: [Synth 8-6014] Unused sequential element uart_send_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/LFSR_CTRL.v:42]
+WARNING: [Synth 8-6014] Unused sequential element uart_data_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/LFSR_CTRL.v:43]
+WARNING: [Synth 8-6014] Unused sequential element send_pending_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/LFSR_CTRL.v:44]
+WARNING: [Synth 8-7137] Register data_buf_reg in module music_uart_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_uart_left.v:35]
+WARNING: [Synth 8-6014] Unused sequential element current_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:186]
+WARNING: [Synth 8-7137] Register rom_reg[0] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[1] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[2] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[3] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[4] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[5] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[6] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[7] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[8] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[9] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[10] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[11] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[12] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[13] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[14] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[15] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[16] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[17] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[18] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[19] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[20] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[21] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[22] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[23] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[24] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[25] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[26] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[27] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[28] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[29] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[30] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[31] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[32] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[33] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[34] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[35] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[36] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[37] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[38] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[39] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[40] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[41] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[42] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[43] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[44] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[45] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[46] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[47] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[48] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[49] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[50] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[51] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[52] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[53] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[54] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[55] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[56] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[57] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register rom_reg[58] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:48]
+WARNING: [Synth 8-7137] Register send_buf_reg[0] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:187]
+WARNING: [Synth 8-7137] Register send_buf_reg[1] in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:187]
+WARNING: [Synth 8-7137] Register tx_data_reg in module music_rom_left has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_left.v:19]
+WARNING: [Synth 8-7137] Register data_buf_reg in module music_uart_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_uart_right.v:35]
+WARNING: [Synth 8-6014] Unused sequential element current_reg was removed.  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:169]
+WARNING: [Synth 8-7137] Register rom_reg[0] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[1] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[2] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[3] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[4] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[5] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[6] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[7] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[8] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[9] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[10] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[11] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[12] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[13] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[14] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[15] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[16] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[17] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[18] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[19] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[20] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[21] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[22] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[23] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[24] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[25] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[26] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[27] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[28] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[29] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[30] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[31] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[32] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[33] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[34] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+WARNING: [Synth 8-7137] Register rom_reg[35] in module music_rom_right has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/03 Digital Lab/Final_Proj/0527_v/music_rom_right.v:52]
+INFO: [Common 17-14] Message 'Synth 8-7137' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1463.766 ; gain = 566.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1463.766 ; gain = 566.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1463.766 ; gain = 566.234
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1463.766 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/03 Digital Lab/Final_Proj/0527_v/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/03 Digital Lab/Final_Proj/0527_v/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/03 Digital Lab/Final_Proj/0527_v/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1572.406 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+存取被拒。
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1572.406 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'txState_reg' in module 'UART_TX_CTRL'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UART_RX_CTRL'
+INFO: [Synth 8-802] inferred FSM for state register 'dir_reg' in module 'light_show'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'music_uart_left'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'music_rom_left'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'music_uart_right'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'music_rom_right'
+INFO: [Synth 8-802] inferred FSM for state register 'txState_reg' in module 'slow_counter_uart'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     RDY |                              001 |                               00
+                LOAD_BIT |                              010 |                               01
+                SEND_BIT |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'txState_reg' using encoding 'one-hot' in module 'UART_TX_CTRL'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                 RECEIVE |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'UART_RX_CTRL'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              000
+                 iSTATE0 |                              010 |                              001
+                 iSTATE1 |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'dir_reg' using encoding 'one-hot' in module 'light_show'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                    DATA |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'music_uart_left'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                               00 |                               00
+                 iSTATE1 |                               01 |                               01
+                  iSTATE |                               10 |                               10
+                 iSTATE0 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'music_rom_left'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                    DATA |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'music_uart_right'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                               00 |                               00
+                 iSTATE1 |                               01 |                               01
+                  iSTATE |                               10 |                               10
+                 iSTATE0 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'music_rom_right'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     RDY |                              001 |                               00
+                LOAD_BIT |                              010 |                               01
+                SEND_BIT |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'txState_reg' using encoding 'one-hot' in module 'slow_counter_uart'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'light_left' (light_show) to 'light_right'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   25 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 8     
+	   2 Input   14 Bit       Adders := 3     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 6     
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               27 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 8     
+	               14 Bit    Registers := 3     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 18    
+	                7 Bit    Registers := 88    
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input   25 Bit        Muxes := 1     
+	   9 Input   19 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 2     
+	   8 Input   17 Bit        Muxes := 1     
+	  13 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 16    
+	   2 Input   14 Bit        Muxes := 5     
+	   4 Input   14 Bit        Muxes := 3     
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 6     
+	   3 Input    8 Bit        Muxes := 3     
+	   2 Input    7 Bit        Muxes := 26    
+	   3 Input    7 Bit        Muxes := 1     
+	   8 Input    7 Bit        Muxes := 1     
+	   3 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 36    
+	  14 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 4     
+	   3 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 6     
+	   4 Input    2 Bit        Muxes := 8     
+	   5 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 22    
+	   3 Input    1 Bit        Muxes := 14    
+	   4 Input    1 Bit        Muxes := 36    
+	   5 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   148|
+|3     |LUT1   |    19|
+|4     |LUT2   |   181|
+|5     |LUT3   |   201|
+|6     |LUT4   |   308|
+|7     |LUT5   |   178|
+|8     |LUT6   |   321|
+|9     |FDCE   |   447|
+|10    |FDPE   |    29|
+|11    |FDRE   |   237|
+|12    |FDSE   |     3|
+|13    |IBUF   |    13|
+|14    |OBUF   |    37|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1572.406 ; gain = 674.875
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 1572.406 ; gain = 566.234
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1572.406 ; gain = 674.875
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1572.406 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 148 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1572.406 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+存取被拒。
+Synth Design complete | Checksum: 833140c3
+INFO: [Common 17-83] Releasing license: Synthesis
+78 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1572.406 ; gain = 1084.344
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1572.406 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/03 Digital Lab/Final_Proj/0527_v/tiles_0527/tiles_0527.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed May 28 13:07:35 2025...
