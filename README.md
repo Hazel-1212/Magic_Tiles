@@ -2,6 +2,7 @@
 
 ## Intro
 <img src="https://github.com/Hazel-1212/Magic_Tiles/blob/main/pictures/motivation.png" width=800>
+
 - This final project is an FPGA music game inspired by Magic Tiles. 
 - We modified the single-player gameplay into a two-player mode, where one player handles the main melody and the other plays the accompaniment. 
 - Tiles with a number fall from the top of the screen on laptop along a rail, 
