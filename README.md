@@ -3,13 +3,18 @@
 ## Intro
 <img src="https://github.com/Hazel-1212/Magic_Tiles/blob/main/pictures/motivation.png" width=800>
 
-- This final project is an FPGA music game inspired by Magic Tiles. 
-- We modified the single-player gameplay into a two-player mode, where one player handles the main melody and the other plays the accompaniment. 
-- Tiles with a number fall from the top of the screen on laptop along a rail, 
+**This final project is an FPGA music game inspired by Magic Tiles.**
+
+We modified the single-player gameplay into a two-player mode, where one player handles the main melody and the other plays the accompaniment. 
+
+Tiles with a number fall from the top of the screen on laptop along a rail, 
 and players use keypad to input the number of the falling tiles, while the switch allows song selection.
-- Two sets of 7-segment displays show individual player scores. 
-- When either player reaches 60 points, Python interface is automatically closed, and LED color indicates the winner.
-- The system uses bidirectional UART communication, either via the FPGA board’s built-in serial port or through AD2 pins.
+
+Two sets of 7-segment displays show individual player scores. 
+
+When either player reaches 60 points, Python interface is automatically closed, and LED color indicates the winner.
+
+The system uses bidirectional UART communication, either via the FPGA board’s built-in serial port or through AD2 pins.
 
 ## Features
 1. Bidirectional UART communication ensures real-time data synchronization.
