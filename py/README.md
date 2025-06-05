@@ -45,17 +45,23 @@ so check **samples** folder first.
         dwf = cdll.LoadLibrary("libdwf.so")
 
 ## Specification
+1. Connect with FPGA
 
-### uart.send(ser)
-1. Initial
-- 'R' : Request the song code
-2. Press Correct Note
-- Left : 'C'
-- Right: 'c' *lowercase*
-- Score add 1
+**uart.py** is used to interact with FPGA.
 
-### uart.receive_data(ser)
-1. A ~ L and O : Left Note 1 - 12 and None pressed
-2. a ~ l and o : Right Note pressed
-3. R : End the game
+We first check device manager to know the port name “COM3” and set the baud rate as 9600 (the same as we design in Verilog). 
 
+And as Row 11 ~18 in Figure 2-5, we open serial port via giving the info of FPGA UART.
+
+2. Connect with AD2
+
+Thankfully, WaveForms SDK has provided sample code for downloader to manage AD2 with Python/C++.
+
+The main function of AD2 UART is to receive notes when the game starts.
+Python send ‘R’ to FPGA to request for left-hand notes and ‘r’ to request
+right-hand notes. 
+
+Another function of AD2 is to detect the random rail number. 
+There are 4 rails for a hand, and we randomly determine it with **module lfsr**. 
+The random rail code is obtained by detecting the high/low level of
+the DIO[14] and DIO[15] when the new tile is spawned.
