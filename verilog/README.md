@@ -10,48 +10,23 @@
 |WAIT1 | Waits for uart_send to fall & ready again |
 |SEND2 | Sends note2 |
 
-### module UART_TX_CTRL (Transmitter)
+###  Transmitter (module UART_TX_CTRL)
 #### FSM (txState)
-- RDY (Idle state)
+|State | Description |
+|------|-----|
+|RDY (Idle state)  | Waits for SEND to go high. |
+|LOAD_BIT | Loads txData as {1'b1, DATA, 1'b0.}.That is,stop bit (1), 8 data bits, start bit (0).|
+|SEND_BIT | Uses bitTmr to maintain the baud rate.Increments bitIndex until all 10 bits are sent. |
 
-Waits for SEND to go high.
-
-- LOAD_BIT
-
-Loads txData as {1'b1, DATA, 1'b0. } 
-
-That is,stop bit (1), 8 data bits, start bit (0).
-
-- SEND_BIT
-
-Uses bitTmr to maintain the baud rate.
-
-Increments bitIndex until all 10 bits are sent
-(start bit + 8 data + stop bit).
-
-### module UART_RX_CTRL (Receiver)
+### Receiver (module UART_RX_CTRL)
 #### FSM 
-- IDLE
-
-Wait for the start bit. 
-
-If start bit detected,reset bit_timer and bit_index, and go to START.
-
-- START
-
-Confirm the start bit is valid, if not, go back IDLE.
-
-BIT_MID = ~half of BIT_TMR_MAX (Row 37), ensuring sampling at the center of the bit.
-
-- RECEIVE
-
-Store a bit in shift_reg . 
-
-After receiving 8 bits, move to STOP.
-
-- STOP
-
-Wait for stop bit, transfer the 8-bit data to DATA, and return to IDLE.
+|State | Description |
+|------|-----|
+|IDLE  | Wait for the start bit.If start bit detected,reset bit_timer and bit_index, and go to START. |
+|START | Confirm the start bit is valid, if not, go back IDLE.BIT_MID = ~half of BIT_TMR_MAX (Row 37), ensuring sampling at the center of the bit. |
+|RECEIVE | Waits for uart_send to fall & ready again |
+|SEND2 | Store a bit in shift_reg . After receiving 8 bits, move to STOP. |
+|STOP |Wait for stop bit, transfer the 8-bit data to DATA, and return to IDLE.|
 
 ## ASCII
 
