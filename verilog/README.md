@@ -37,7 +37,7 @@
 - ‘R’: One of the players reaches 60. Close the interface.
 
 ### Transmit via PMOD and then AD2 UART
-{x, y}
+- {x, y}
 
 x ∈ {‘A’,’B’..., ‘L’,’a’,’b’...,’l’}, y ∈ {1,2,3,4,5,6,7}
 
@@ -51,36 +51,21 @@ while lowercase denotes right-hand musical notation.
 
 - A-Z
 
-| Char | Hex | Char | Hex |
-|------|-----|------|-----|
-| A    | 41  | N    | 4E  |
-| B    | 42  | O    | 4F  |
-| C    | 43  | P    | 50  |
-| D    | 44  | Q    | 51  |
-| E    | 45  | R    | 52  |
-| F    | 46  | S    | 53  |
-| G    | 47  | T    | 54  |
-| H    | 48  | U    | 55  |
-| I    | 49  | V    | 56  |
-| J    | 4A  | W    | 57  |
-| K    | 4B  | X    | 58  |
-| L    | 4C  | Y    | 59  |
-| M    | 4D  | Z    | 5A  |
-
-- 0–9
-
-| Char | Hex |
-|------|-----|
-| 1    | 31  | 
-| 2    | 32  | 
-| 3    | 33  | 
-| 4    | 34  | 
-| 5    | 35  | 
-| 6    | 36  | 
-| 7    | 37  | 
-| 8    | 38  | 
-| 9    | 39  | 
-| 0    | 40  | 
+| Char | Hex | Char | Hex | Char | Hex |
+|------|-----|------|-----|------|-----|
+| A    | 41  | N    | 4E  | 1    | 31  | 
+| B    | 42  | O    | 4F  | 2    | 32  |
+| C    | 43  | P    | 50  | 3    | 33  | 
+| D    | 44  | Q    | 51  | 4    | 34  |
+| E    | 45  | R    | 52  | 5    | 35  | 
+| F    | 46  | S    | 53  | 6    | 36  | 
+| G    | 47  | T    | 54  | 7    | 37  | 
+| H    | 48  | U    | 55  | 8    | 38  | 
+| I    | 49  | V    | 56  | 9    | 39  | 
+| J    | 4A  | W    | 57  |      |     | 
+| K    | 4B  | X    | 58  |      |     | 
+| L    | 4C  | Y    | 59  |      |     | 
+| M    | 4D  | Z    | 5A  |      |     | 
 
 - Other Useful Characters
 
