@@ -45,13 +45,13 @@ so check **samples** folder first.
         dwf = cdll.LoadLibrary("libdwf.so")
 
 ## Functions
-1. Connect with FPGA
+### Connect with FPGA
 
 - **uart.py** is used to interact with FPGA.
 
 - We first check device manager to know the port name “COM3” and set the baud rate as 9600 (the same as we design in Verilog). 
 
-2. Connect with AD2
+### Connect with AD2
 
 Thankfully, WaveForms SDK has provided sample code for downloader to manage AD2 with Python/C++.
 
