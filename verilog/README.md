@@ -15,20 +15,39 @@
 |State | Description |
 |------|-----|
 |RDY (Idle state)  | Waits for SEND to go high. |
-|LOAD_BIT | Loads txData as {1'b1, DATA, 1'b0.}.That is,stop bit (1), 8 data bits, start bit (0).|
-|SEND_BIT | Uses bitTmr to maintain the baud rate.Increments bitIndex until all 10 bits are sent. |
+|LOAD_BIT | Loads txData as {1'b1, DATA, 1'b0.}. That is,stop bit (1), 8 data bits, start bit (0).|
+|SEND_BIT | Uses bitTmr to maintain the baud rate. Increments bitIndex until all 10 bits are sent. |
 
 ### Receiver (module UART_RX_CTRL)
 #### FSM 
 |State | Description |
 |------|-----|
-|IDLE  | Wait for the start bit.If start bit detected,reset bit_timer and bit_index, and go to START. |
-|START | Confirm the start bit is valid, if not, go back IDLE.BIT_MID = ~half of BIT_TMR_MAX (Row 37), ensuring sampling at the center of the bit. |
+|IDLE  | Wait for the start bit. If start bit detected,reset bit_timer and bit_index, and go to START. |
+|START | Confirm the start bit is valid, if not, go back IDLE. BIT_MID = ~half of BIT_TMR_MAX (Row 37), ensuring sampling at the center of the bit. |
 |RECEIVE | Waits for uart_send to fall & ready again |
-|SEND2 | Store a bit in shift_reg . After receiving 8 bits, move to STOP. |
+|SEND2 | Store a bit in shift_reg. After receiving 8 bits, move to STOP. |
 |STOP |Wait for stop bit, transfer the 8-bit data to DATA, and return to IDLE.|
 
-## ASCII
+## Decoding and encoding rules for signals with UART
+### Transmit with in-built UART (FPGA -> PC)
+- ‘A’ ~ ‘L’: Left keypad is pressed 1 ~ 12 respectively.
+- ‘O’: Left keypad is not pressed.
+- ‘a’ ~ ‘l’: Right keypad is pressed 1 ~ 12 respectively.
+- ‘o’: Right keypad is not pressed.
+- ‘R’: One of the players reaches 60. Close the interface.
+
+### Transmit via PMOD and then AD2 UART
+{x, y}
+
+x ∈ {‘A’,’B’..., ‘L’,’a’,’b’...,’l’}, y ∈ {1,2,3,4,5,6,7}
+
+It means the note number is x and the duration of this note is y/4 second.
+
+Uppercase character denotes left-hand musical notation, 
+
+while lowercase denotes right-hand musical notation.
+
+### ASCII
 
 - A-Z
 
