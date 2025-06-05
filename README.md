@@ -1,4 +1,7 @@
 # Magic_Tiles
+
+<img src="https://github.com/Hazel-1212/Magic_Tiles/blob/main/pictures/motivation.png" width=800>
+
 ## Intro
 - This final project is an FPGA music game inspired by Magic Tiles. 
 - We modified the single-player gameplay into a two-player mode, where one player handles the main melody and the other plays the accompaniment. 
@@ -7,8 +10,6 @@ and players use keypad to input the number of the falling tiles, while the switc
 - Two sets of 7-segment displays show individual player scores. 
 - When either player reaches 60 points, Python interface is automatically closed, and LED color indicates the winner.
 - The system uses bidirectional UART communication, either via the FPGA board’s built-in serial port or through AD2 pins.
-
-<img src="https://github.com/Hazel-1212/Magic_Tiles/blob/main/pictures/motivation.png" width=800>
 
 ## Features
 1. Bidirectional UART communication ensures real-time data synchronization.
@@ -25,7 +26,13 @@ and players use keypad to input the number of the falling tiles, while the switc
 - WaveForms installed
  (Make sure the folder is available **"C:\Program Files (x86)\Digilent\WaveFormsSDK\samples"**)
 
- ## Signal Flow in the Game Loop
+<img src="https://github.com/Hazel-1212/Magic_Tiles/blob/main/pictures/block.png" width=800>
+
+## Modules
+
+<img src="https://github.com/Hazel-1212/Magic_Tiles/blob/main/pictures/modules.png" width=800>
+
+## Signal Flow in the Game Loop
 
 This table describes how signals flow between the PC and FPGA during different phases of the rhythm game.
 
