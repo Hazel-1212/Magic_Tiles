@@ -2,29 +2,28 @@
 
 ## module uart_with_debouncer
 
-### FSM state machine
-
-State	Description
-
-IDLE	Waits for a new button press
-
-SEND1	Sends note1
-
-WAIT1	Waits for uart_send to fall & ready again
-
-SEND2	Sends note2
+### FSM
+|State | Description |
+|------|-----|
+|IDLE  | Waits for a new button press |
+|SEND1 | Sends note1 |
+|WAIT1 | Waits for uart_send to fall & ready again |
+|SEND2 | Sends note2 |
 
 ### module UART_TX_CTRL (Transmitter)
 #### FSM (txState)
 - RDY (Idle state)
+
 Waits for SEND to go high.
 
 - LOAD_BIT
+
 Loads txData as {1'b1, DATA, 1'b0. } 
 
 That is,stop bit (1), 8 data bits, start bit (0).
 
 - SEND_BIT
+
 Uses bitTmr to maintain the baud rate.
 
 Increments bitIndex until all 10 bits are sent
@@ -33,21 +32,25 @@ Increments bitIndex until all 10 bits are sent
 ### module UART_RX_CTRL (Receiver)
 #### FSM 
 - IDLE
+
 Wait for the start bit. 
 
 If start bit detected,reset bit_timer and bit_index, and go to START.
 
 - START
+
 Confirm the start bit is valid, if not, go back IDLE.
 
 BIT_MID = ~half of BIT_TMR_MAX (Row 37), ensuring sampling at the center of the bit.
 
 - RECEIVE
+
 Store a bit in shift_reg . 
 
 After receiving 8 bits, move to STOP.
 
 - STOP
+
 Wait for stop bit, transfer the 8-bit data to DATA, and return to IDLE.
 
 ## ASCII
