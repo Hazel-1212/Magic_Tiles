@@ -1,8 +1,7 @@
 # Magic_Tiles
 
-<img src="https://github.com/Hazel-1212/Magic_Tiles/blob/main/pictures/motivation.png" width=800>
-
 ## Intro
+<img src="https://github.com/Hazel-1212/Magic_Tiles/blob/main/pictures/motivation.png" width=800>
 - This final project is an FPGA music game inspired by Magic Tiles. 
 - We modified the single-player gameplay into a two-player mode, where one player handles the main melody and the other plays the accompaniment. 
 - Tiles with a number fall from the top of the screen on laptop along a rail, 
@@ -26,7 +25,7 @@ and players use keypad to input the number of the falling tiles, while the switc
 - WaveForms installed
  (Make sure the folder is available **"C:\Program Files (x86)\Digilent\WaveFormsSDK\samples"**)
 
-<img src="https://github.com/Hazel-1212/Magic_Tiles/blob/main/pictures/block.png" width=800>
+<img src="https://github.com/Hazel-1212/Magic_Tiles/blob/main/pictures/block.png" width=600>
 
 ## Modules
 
@@ -34,7 +33,7 @@ and players use keypad to input the number of the falling tiles, while the switc
 
 ## Signal Flow in the Game Loop
 
-This table describes how signals flow between the PC and FPGA during different phases of the rhythm game.
+This table describes how signals flow between the PC (Personal Computer) and FPGA during different phases of the rhythm game.
 
 | Time          | Direction   | Function                                      |
 |---------------|-------------|-----------------------------------------------|
